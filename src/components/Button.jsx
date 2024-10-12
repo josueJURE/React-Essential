@@ -1,7 +1,10 @@
 function Button({children}) {
+    function clickHandler() {
+        console.log("I've been clicked")
+    }
     return(
       <>
-      <li><button>{children}</button></li> 
+      <li><button onClick={clickHandler}>{children}</button></li> 
       </>
     )
   }
