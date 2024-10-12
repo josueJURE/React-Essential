@@ -5,11 +5,13 @@ function generateRandomInteger(max) {
   return Math.floor(Math.random() * (max + 1))
 }
 
+const reactDescriptions = ["Fundamental", "Crucial", "Core", "Vital"];
+
 const description = reactDescriptions[generateRandomInteger(reactDescriptions.length -1)];
 
 
 
-const reactDescriptions = ["Fundamental", "Crucial", "Core", "Vital"];
+
 
 function Header() {
 
