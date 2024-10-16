@@ -17,7 +17,7 @@ import { useState } from "react";
 
 function App() {
 
-  let [state, setState] = useState('components')
+  let [state, setState] = useState('')
 
   // let text = "please click a button"
 
@@ -64,12 +64,20 @@ function App() {
       <Button onSelect={() => clickHandler("state")}>State</Button>
       </menu>
       <div id="tab-content">
-      <h3>{EXAMPLES[state].title}</h3>
+      {!state && <p>Please select a content</p> }
+      {state && <>
+        <h3>{EXAMPLES[state].title}</h3>
       <p>{EXAMPLES[state].description}</p>
       <pre>
         <code>{EXAMPLES[state].code}</code>
 
       </pre>
+
+      </>}
+      
+
+
+    
 
 
       </div>
