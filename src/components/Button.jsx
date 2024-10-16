@@ -1,10 +1,8 @@
-function Button({children}) {
-    function clickHandler() {
-        console.log("I've been clicked")
-    }
+function Button(props) {
+  
     return(
       <>
-      <li><button onClick={clickHandler}>{children}</button></li> 
+      <li><button onClick={props.onSelect}>{props.children}</button></li> 
       </>
     )
   }
