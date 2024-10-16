@@ -54,7 +54,23 @@ function App() {
       <h2>Time to get started!</h2>
       
       <ul>
-      <CoreConcept 
+
+      {CORE_CONCEPTS.map((concept) => {
+        <CoreConcept 
+        image={concept.image}
+        title={concept.title}
+        description={concept.description}
+        
+           /> 
+
+      })
+      
+      }
+
+   
+  
+
+      {/* <CoreConcept 
       {...CORE_CONCEPTS[0]} 
      
        />
@@ -65,9 +81,9 @@ function App() {
        />
 
       <CoreConcept 
-      {...CORE_CONCEPTS[2]} 
+      {...CORE_CONCEPTS[2]}  */}
      
-       />
+     
       </ul>
       </section>
       <section id="examples">
