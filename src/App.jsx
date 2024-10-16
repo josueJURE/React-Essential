@@ -19,7 +19,7 @@ function App() {
 
   let [state, setState] = useState('')
 
-  // let text = "please click a button"
+
 
   function clickHandler(selectedButton) {
     setState(selectedButton)
@@ -27,6 +27,21 @@ function App() {
   }
 
   console.log("APP excecution rendering")
+
+  let tabContent = <p>Please select a content.</p>;
+
+  if(state) {
+    tabContent = 
+    <div id="tab-content">
+      <h3>{EXAMPLES[state].title}</h3>
+      <p>{EXAMPLES[state].description}</p>
+      <pre>
+        <code>{EXAMPLES[state].code}</code>
+      </pre>
+      </div>
+
+    
+  }
 
 
 
@@ -63,30 +78,7 @@ function App() {
       <Button onSelect={() => clickHandler("props")}>Props</Button>
       <Button onSelect={() => clickHandler("state")}>State</Button>
       </menu>
-      <div id="tab-content">
-      {!state && <p>Please select a content</p> }
-      {state && <>
-        <h3>{EXAMPLES[state].title}</h3>
-      <p>{EXAMPLES[state].description}</p>
-      <pre>
-        <code>{EXAMPLES[state].code}</code>
-
-      </pre>
-
-      </>}
-      
-
-
-    
-
-
-      </div>
-
-
-      
-
-
-
+      {tabContent}
       </section>
       </main>
     </div>
