@@ -1,18 +1,9 @@
 
-
-
 import {CORE_CONCEPTS} from "./data";
-
 import { EXAMPLES} from './data'
-
-
-
 import CoreConcept from "./components/CoreConcepts";
-
 import Header from "./components/Header";
-
 import Button from "./components/Button";
-
 import { useState } from "react";
 
 function App() {
@@ -46,7 +37,7 @@ function App() {
 
 
   return (
-    <div>
+    <>
     <Header />
   
       <main>
@@ -67,23 +58,7 @@ function App() {
       
       }
 
-   
   
-
-      {/* <CoreConcept 
-      {...CORE_CONCEPTS[0]} 
-     
-       />
-
-      <CoreConcept 
-      {...CORE_CONCEPTS[1]} 
-    
-       />
-
-      <CoreConcept 
-      {...CORE_CONCEPTS[2]}  */}
-     
-     
       </ul>
       </section>
       <section id="examples">
@@ -100,7 +75,7 @@ function App() {
       {tabContent}
       </section>
       </main>
-    </div>
+    </>
   );
 }
 
