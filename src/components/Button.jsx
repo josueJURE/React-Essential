@@ -1,8 +1,8 @@
-function Button(props) {
+function Button({children, onSelect, isSelected}) {
   
     return(
       <>
-      <li><button onClick={props.onSelect}>{props.children}</button></li> 
+      <li><button className={isSelected && 'active'} onClick={onSelect}>{children}</button></li> 
       </>
     )
   }

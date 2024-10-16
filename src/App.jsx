@@ -73,10 +73,13 @@ function App() {
       <section id="examples">
       <h2>Examples</h2>
       <menu>
-      <Button onSelect={() => clickHandler("components")}>Components</Button>
-      <Button onSelect={() => clickHandler("jsx")}>JSX</Button>
-      <Button onSelect={() => clickHandler("props")}>Props</Button>
-      <Button onSelect={() => clickHandler("state")}>State</Button>
+
+
+
+      <Button isSlected={state === "components"} onSelect={() => clickHandler("components")}>Components</Button>
+      <Button isSlected={state === "jsx"} onSelect={() => clickHandler("jsx")}>JSX</Button>
+      <Button isSlected={state === "props"} onSelect={() => clickHandler("props")}>Props</Button>
+      <Button isSlected={state === "state"} onSelect={() => clickHandler("state")}>State</Button>
       </menu>
       {tabContent}
       </section>
